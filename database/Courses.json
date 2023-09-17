@@ -1,0 +1,65 @@
+[
+  {
+    "name": {
+      "name": "Computers",
+      "level": "Level3",
+      "description": "Des 3",
+      "imageUrl": "1694951662218-profilelogo.png"
+    },
+    "lectures": [
+      {},
+      {
+        "lecture": {
+          "cname": "Computers",
+          "lecture": "ComLec1"
+        }
+      },
+      {
+        "lecture": {
+          "cname": "Computers",
+          "lecture": "ComLec2"
+        }
+      }
+    ]
+  },
+  {
+    "name": {
+      "name": "IT software",
+      "level": "Level2",
+      "description": "Description: great course",
+      "imageUrl": "1694951695158-profilelogo.png"
+    },
+    "lectures": [
+      {},
+      {
+        "lecture": {
+          "cname": "IT software",
+          "lecture": "ITLec1"
+        }
+      }
+    ]
+  },
+  {
+    "name": {
+      "name": "Technical",
+      "level": "Level2",
+      "description": "des",
+      "imageUrl": "1694954507171-orders.png"
+    },
+    "lectures": [
+      {},
+      {
+        "lecture": {
+          "cname": "Technical",
+          "lecture": "Lecture1"
+        }
+      },
+      {
+        "lecture": {
+          "cname": "Technical",
+          "lecture": "Lecture2"
+        }
+      }
+    ]
+  }
+]

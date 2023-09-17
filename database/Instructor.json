@@ -1,0 +1,43 @@
+[
+  {
+    "name": {
+      "name": "Instructor1",
+      "password": "123"
+    },
+    "password": {
+      "name": "Instructor1",
+      "password": "123"
+    },
+    "assign": [
+      {},
+      {
+        "course": "Course3",
+        "lecture": "Lecture1",
+        "date": "2023-09-21"
+      },
+      {
+        "course": "Technical",
+        "lecture": "Lecture2",
+        "date": "2023-09-18"
+      }
+    ]
+  },
+  {
+    "name": {
+      "name": "test1",
+      "password": "123"
+    },
+    "password": {
+      "name": "test1",
+      "password": "123"
+    },
+    "assign": [
+      {},
+      {
+        "course": "IT software",
+        "lecture": "ComLec2",
+        "date": "2023-09-23"
+      }
+    ]
+  }
+]
