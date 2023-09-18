@@ -46,7 +46,10 @@ router.post('/adminLogin', async function(req, res){
       const user = findUserByName(name);
       if(user.password === password){
         const token = generateToken(user);
-        addTokenToAdmin(name, token);
+        if(user.tokens.length < 3){
+          addTokenToAdmin(name, token);
+        }
+        
         res.status(201).json({ message: 'User logged in Successfully', token });
         
       }
@@ -114,8 +117,19 @@ router.post('/upload', upload.single('image'), (req, res) => {
     const data = getAllCourses();
     res.send(data);
   });
+  router.get('/getCourse', async function (req, res){
+    const name = req.body.userName;
+    const data = findCourseByName(name);
+    res.send(data);
+  });
+
   router.get('/getInstructors', async function (req, res){
     const data = getAllInstructors();
+    res.send(data);
+  });
+  router.post('/getInstructor', async function (req, res){
+    const name = req.body;
+    const data = findInstructorByName(name);
     res.send(data);
   });
 
