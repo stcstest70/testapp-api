@@ -1,10 +1,8 @@
 import express from "express";
 const router = express.Router();
-import AdminModal from '../modals/AdminModal.js';
 import jwt from "jsonwebtoken";
 import { readAdminData, writeAdminData } from "../controllers/admin/AdminData.js";
 import { createAdmin, addTokenToAdmin, findUserByName } from "../controllers/admin/AdminOperations.js";
-import multer from 'multer';
 import { createCourse, findCourseByName, getAllCourses, addCourseToCourses } from "../controllers/courses/CourseOperations.js";
 import { createInstructor, getAllInstructors, addCourseLectureDateToUser, findInstructorByName } from "../controllers/instructor/InstructorOperations.js";
 
@@ -24,17 +22,6 @@ function generateToken(user) {
     }
 }
 
-//multer 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, 'uploads/'); // Define the folder where uploaded files will be stored
-    },
-    filename: (req, file, cb) => {
-      cb(null, Date.now() + '-' + file.originalname); // Define the file name
-    },
-  });
-  
-  const upload = multer({ storage: storage });
 
 router.post('/adminLogin', async function(req, res){
     try {
@@ -92,26 +79,6 @@ router.post('/adminLogin', async function(req, res){
       }
     
 });
-
-// router.post('/upload', upload.single('image'), (req, res) => {
-//     if (!req.file) {
-//         return res.status(400).json({ message: 'No file uploaded' });
-//       }
-//     const data = {
-//       name: req.body.name,
-//       level: req.body.level,
-//       description: req.body.description,
-//       imageUrl: req.file.filename, // Store the filename as the image URL
-//     };
-
-//     const course = findCourseByName(data.name);
-    
-//     if(course){
-//         res.status(400).json({ message: 'Data already exist' });
-//     }
-//     createCourse(data);
-//     res.status(200).json({ message: 'Data uploaded successfully' });
-//   });
 
 router.post('/upload', (req, res) => {
   
