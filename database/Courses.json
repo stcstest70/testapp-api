@@ -2,62 +2,51 @@
   {
     "name": {
       "name": "Computers",
-      "level": "Level3",
-      "description": "Des 3",
-      "imageUrl": "1694951662218-profilelogo.png"
+      "level": "Level2",
+      "description": "Some description",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/testapp-fcfc8.appspot.com/o/Courses%2FcomputerLogo.png?alt=media&token=29393e83-155f-4b44-86cf-6d68bfc16b01"
     },
     "lectures": [
       {},
       {
         "lecture": {
           "cname": "Computers",
-          "lecture": "ComLec1"
+          "lecture": "Comp1"
         }
       },
       {
         "lecture": {
           "cname": "Computers",
-          "lecture": "ComLec2"
+          "lecture": "Comp2"
         }
       }
     ]
   },
   {
     "name": {
-      "name": "IT software",
+      "name": "Software Course",
       "level": "Level2",
-      "description": "Description: great course",
-      "imageUrl": "1694951695158-profilelogo.png"
+      "description": "Some Description",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/testapp-fcfc8.appspot.com/o/Courses%2Flogo192.png?alt=media&token=8368b136-9bce-44e6-bee9-c55dfb2932ac"
     },
     "lectures": [
       {},
       {
         "lecture": {
-          "cname": "IT software",
-          "lecture": "ITLec1"
-        }
-      }
-    ]
-  },
-  {
-    "name": {
-      "name": "Technical",
-      "level": "Level2",
-      "description": "des",
-      "imageUrl": "1694954507171-orders.png"
-    },
-    "lectures": [
-      {},
-      {
-        "lecture": {
-          "cname": "Technical",
-          "lecture": "Lecture1"
+          "cname": "Software Course",
+          "lecture": "Software Lec1"
         }
       },
       {
         "lecture": {
-          "cname": "Technical",
-          "lecture": "Lecture2"
+          "cname": "Software Course",
+          "lecture": "Software Lec2"
+        }
+      },
+      {
+        "lecture": {
+          "cname": "Software Course",
+          "lecture": "Software Lec3"
         }
       }
     ]

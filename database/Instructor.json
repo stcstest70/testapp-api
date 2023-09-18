@@ -24,19 +24,24 @@
   },
   {
     "name": {
-      "name": "test1",
+      "name": "Instructor2",
       "password": "123"
     },
     "password": {
-      "name": "test1",
+      "name": "Instructor2",
       "password": "123"
     },
     "assign": [
       {},
       {
-        "course": "IT software",
-        "lecture": "ComLec2",
-        "date": "2023-09-23"
+        "course": "Software Course",
+        "lecture": "Software Lec2",
+        "date": "2023-09-19"
+      },
+      {
+        "course": "Computers",
+        "lecture": "Comp2",
+        "date": "2023-09-20"
       }
     ]
   }

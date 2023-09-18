@@ -93,25 +93,43 @@ router.post('/adminLogin', async function(req, res){
     
 });
 
-router.post('/upload', upload.single('image'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({ message: 'No file uploaded' });
-      }
-    const data = {
-      name: req.body.name,
-      level: req.body.level,
-      description: req.body.description,
-      imageUrl: req.file.filename, // Store the filename as the image URL
-    };
+// router.post('/upload', upload.single('image'), (req, res) => {
+//     if (!req.file) {
+//         return res.status(400).json({ message: 'No file uploaded' });
+//       }
+//     const data = {
+//       name: req.body.name,
+//       level: req.body.level,
+//       description: req.body.description,
+//       imageUrl: req.file.filename, // Store the filename as the image URL
+//     };
 
-    const course = findCourseByName(data.name);
+//     const course = findCourseByName(data.name);
     
-    if(course){
-        res.status(400).json({ message: 'Data already exist' });
-    }
-    createCourse(data);
-    res.status(200).json({ message: 'Data uploaded successfully' });
-  });
+//     if(course){
+//         res.status(400).json({ message: 'Data already exist' });
+//     }
+//     createCourse(data);
+//     res.status(200).json({ message: 'Data uploaded successfully' });
+//   });
+
+router.post('/upload', (req, res) => {
+  
+  const data = {
+    name: req.body.name,
+    level: req.body.level,
+    description: req.body.description,
+    imageUrl: req.body.image, 
+  };
+  console.log(data);
+  const course = findCourseByName(data.name);
+  
+  if(course){
+      res.status(400).json({ message: 'Data already exist' });
+  }
+  createCourse(data);
+  res.status(200).json({ message: 'Data uploaded successfully' });
+});
 
   router.get('/getCourses', async function (req, res){
     const data = getAllCourses();
