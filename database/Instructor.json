@@ -21,28 +21,5 @@
         "date": "2023-09-18"
       }
     ]
-  },
-  {
-    "name": {
-      "name": "Instructor2",
-      "password": "123"
-    },
-    "password": {
-      "name": "Instructor2",
-      "password": "123"
-    },
-    "assign": [
-      {},
-      {
-        "course": "Software Course",
-        "lecture": "Software Lec2",
-        "date": "2023-09-19"
-      },
-      {
-        "course": "Computers",
-        "lecture": "Comp2",
-        "date": "2023-09-20"
-      }
-    ]
   }
 ]
