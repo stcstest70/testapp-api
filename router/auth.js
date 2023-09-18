@@ -129,7 +129,8 @@ router.post('/upload', upload.single('image'), (req, res) => {
   });
   router.post('/getInstructor', async function (req, res){
     const name = req.body;
-    const data = findInstructorByName(name);
+    const data = findInstructorByName(name.name);
+    // console.log(data);
     res.send(data);
   });
 
