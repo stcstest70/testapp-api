@@ -6,24 +6,22 @@ import cors from 'cors';
 import auth from './router/auth.js';
 import bodyParser from "body-parser";
 
-// const allowedOrigins = [
-//     "https://testapp-tau-inky.vercel.app",
-//     "https://testapp-stcstest70-gmailcom.vercel.app",
-//     "https://testapp-git-main-stcstest70-gmailcom.vercel.app"
-//   ];
-  
-//   app.use(cors({
-//     origin: allowedOrigins,
-//     credentials: true,
-//   }));
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://testapp-tau-inky.vercel.app');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-  });
-app.use(cors());
+const allowedOrigins = [
+    "https://testapp-tau-inky.vercel.app",
+    "https://testapp-stcstest70-gmailcom.vercel.app",
+    "https://testapp-git-main-stcstest70-gmailcom.vercel.app"
+  ];
 
+// Configure CORS middleware with the allowed origins and other options.
+app.use(cors({
+    origin: allowedOrigins,
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true, // Include credentials in the request (if needed).
+    optionsSuccessStatus: 204, // Return a 204 status for preflight requests.
+    allowedHeaders: 'Content-Type',
+}));
+
+// Use bodyParser middleware to handle URL-encoded and JSON request bodies.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());

@@ -99,22 +99,22 @@ router.post('/upload', (req, res) => {
 });
 
   router.get('/getCourses', async function (req, res){
-    const data = getAllCourses();
+    const data = await getAllCourses();
     res.send(data);
   });
   router.get('/getCourse', async function (req, res){
     const name = req.body.userName;
-    const data = findCourseByName(name);
+    const data = await findCourseByName(name);
     res.send(data);
   });
 
   router.get('/getInstructors', async function (req, res){
-    const data = getAllInstructors();
+    const data = await getAllInstructors();
     res.send(data);
   });
   router.post('/getInstructor', async function (req, res){
     const name = req.body;
-    const data = findInstructorByName(name.name);
+    const data = await findInstructorByName(name.name);
     // console.log(data);
     res.send(data);
   });
