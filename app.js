@@ -6,12 +6,17 @@ import cors from 'cors';
 import auth from './router/auth.js';
 import bodyParser from "body-parser";
 
-// app.use(function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-//   });
-app.use(cors());
+const allowedOrigins = [
+    "https://testapp-tau-inky.vercel.app",
+    "https://testapp-stcstest70-gmailcom.vercel.app",
+    "https://testapp-git-main-stcstest70-gmailcom.vercel.app"
+  ];
+  
+  // Allow requests from the specified origins and enable credentials
+  app.use(cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
