@@ -98,17 +98,17 @@ router.post('/upload', (req, res) => {
   res.status(200).json({ message: 'Data uploaded successfully' });
 });
 
-  router.get('/getCourses', async function (req, res){
+  router.post('/getCourses', async function (req, res){
     const data = await getAllCourses();
     res.send(data);
   });
-  router.get('/getCourse', async function (req, res){
+  router.post('/getCourse', async function (req, res){
     const name = req.body.userName;
     const data = await findCourseByName(name);
     res.send(data);
   });
 
-  router.get('/getInstructors', async function (req, res){
+  router.post('/getInstructors', async function (req, res){
     const data = await getAllInstructors();
     res.send(data);
   });
